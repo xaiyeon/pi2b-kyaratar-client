@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <q-page>
+            <div class="centerof">
+                <easy-panel color="primary" title="Not Accessible">
+                    <div>
+                        <p>Sorry Master, but the service is not accessible unless you are logged in. Consider the below options to unlock this feature.</p>
+                        <q-btn label="Login" @click="navigateTo('login')"></q-btn> <q-btn label="Register" @click="navigateTo('register')"></q-btn>
+                    </div>
+                </easy-panel>
+            </div>
+        </q-page>
+    </div>
+</template>
+
+<script lang="ts">
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import EasyPanel from './EasyPanel.vue';
+
+// use this as copy and paste for making .vue files, change name
+@Component({
+    components: {
+        EasyPanel,
+    },
+})
+export default class NotRegistered extends Vue {
+    // data can just be define here using public
+
+    public navigateTo(e) {
+        this.$router.push({
+        name: e,
+        });
+    }
+}
+</script>
+
+<style scoped lang="scss">
+
+.centerof {
+    margin: 0;
+    display: inline;
+}
+
+</style>
