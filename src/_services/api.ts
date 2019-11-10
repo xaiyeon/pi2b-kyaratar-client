@@ -11,7 +11,7 @@ export default () => {
   const addApi = 'api';
   const devTestURL = `http://localhost:8084/`;
   // const productionURL = `https://www.api.kyaratar.com/`;
-  const productionURL = `https://kyaratar-258405.appspot.com/`;
+  const productionURL = `https://api-dot-kyaratar-258405.appspot.com/`;
 
   let url = '';
   if (settings.isProduction) {
